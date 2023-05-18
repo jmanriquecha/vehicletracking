@@ -1,0 +1,19 @@
+{
+    "name": "jorgemanrique/mini-framework",
+    "description": "mini framework",
+    "authors": [
+        {
+            "name": "JManriqueC",
+            "email": "georgemanc.28@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    }
+}

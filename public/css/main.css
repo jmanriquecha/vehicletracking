@@ -1,0 +1,7 @@
+.inactive {
+    display: none;
+}
+
+.removeText {
+    content: "Hola";
+}
