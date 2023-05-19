@@ -5,7 +5,12 @@
             $nulo = true;
         }
     }
+    
+    // Obtener el último origen y destino
+    $ultimoOrigen = $data['recorridos'][0]['origen'];
+    $ultimoDestino = $data['recorridos'][0]['destino'];
 ?>
+
 <br>
 
 <?php
@@ -29,18 +34,18 @@
             <option value="" selected>Seleccione un vehículo</option>
             <?php
                 foreach($data['vehiculos'] as $vehiculo){
-                    echo "<option value='{$vehiculo['id']}'>Placa: {$vehiculo['placa']}</option>";
+                    echo "<option selected value='{$vehiculo['id']}'>Placa: {$vehiculo['placa']}</option>";
                 }
             ?>
         </select>
     <label for="origen">Elige una placa *</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="origen" id="origen" value="" class="form-control" placeholder="Origen" required="true">
+        <input type="text" name="origen" id="origen" value="<?= $ultimoDestino ?>" class="form-control" placeholder="Origen" required="true">
         <label for="origen">Origen *</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="destino" id="destino" value="" class="form-control" placeholder="Destino">
+        <input type="text" name="destino" id="destino" value="<?= $ultimoOrigen ?>" class="form-control" placeholder="Destino">
         <label for="destino">Destino *</label>
     </div>
 
