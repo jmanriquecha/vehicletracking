@@ -41,12 +41,30 @@
             <li><a class="dropdown-item" href="<?= RUTA ?>/tanquear">Listado</a></li>
           </ul>
         </li>
-
       </ul>
+
       <?php if ($_SESSION['user']) : ?>
-        <form action="<?=RUTA?>/auth/logout" class="d-flex" method="post">
-          <button class="nav-link text-white btn btn-white-outline" type="submit" name="logout">logout</button>
-        </form>
+        <ul class="navbar-nav mr-auto">
+          <li><hr class="dropdown-divider bg-white"></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex justify-content-start align-items-center me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="circle-img-profile me-3">
+                  JM
+                </div>  
+              <?= $_SESSION["user"]?>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Configuraciones</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <form action="<?=RUTA?>/auth/logout"  method="post">
+                  <button class="dropdown-item" type="submit" name="logout">Salir</button>
+                </form>
+              </li>
+            </ul>
+          </li>
+        </ul>       
       <?php endif ?>
     </div>
   </div>

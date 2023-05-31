@@ -2,6 +2,27 @@
     display: none;
 }
 
-.removeText {
-    content: "Hola";
+.hr-top {
+    border-top: 1px solid #FFF;
+}
+
+.circle-img-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    color: #000;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.circle-img-profile img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
