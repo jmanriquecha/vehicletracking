@@ -1,3 +1,15 @@
+<?php
+  $user_img = $_SESSION['user_img'];
+  $frist_letter_user_name = strtoupper($_SESSION['user_name'][0]);
+  $frist_letter_user_lastname = strtoupper($_SESSION['user_lastname'][0]);
+  if( $user_img === NULL ){
+    $user_img = $frist_letter_user_name . $frist_letter_user_lastname;
+  }
+  else{
+    $user_img = "<img src='".Assets."/".$user_img."'/>";
+  }
+?>
+
 <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?= RUTA ?>/">CODEVELOP</a>
@@ -44,27 +56,25 @@
       </ul>
 
       <?php if ($_SESSION['user']) : ?>
-        <ul class="navbar-nav mr-auto">
-          <li><hr class="dropdown-divider bg-white"></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex justify-content-start align-items-center me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="circle-img-profile me-3">
-                  JM
-                </div>  
-              <?= $_SESSION["user"]?>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Configuraciones</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <form action="<?=RUTA?>/auth/logout"  method="post">
-                  <button class="dropdown-item" type="submit" name="logout">Salir</button>
-                </form>
-              </li>
-            </ul>
-          </li>
-        </ul>       
+      <ul class="navbar-nav mr-auto">
+        <li><hr class="dropdown-divider bg-white"></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex justify-content-start align-items-center me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="circle-img-profile me-3">
+              <?= $user_img ?>
+            </div>
+            <?= $_SESSION['user'] ?>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Configuraciones</a></li>
+            <li><hr class="dropdown-divider"></li>
+              <form action="<?=RUTA?>/auth/logout"  method="post">
+                <button class="dropdown-item" type="submit" name="logout">Salir</button>
+              </form>
+          </ul>
+        </li>
+      </ul>       
       <?php endif ?>
     </div>
   </div>

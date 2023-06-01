@@ -24,6 +24,9 @@ class AuthController extends Controller
             session_start();
             $_SESSION['user'] = $data['username'];
             $_SESSION['user_id'] = $data['id'];
+            $_SESSION['user_img'] = $data['img'];
+            $_SESSION['user_name'] = $data["nombre"];
+            $_SESSION['user_lastname'] = $data["apellido"];
             header("location:" . RUTA . "/");
         }else{
             header("location:" . RUTA . "{$this->raiz}");
@@ -40,7 +43,10 @@ class AuthController extends Controller
             session_start();
             session_unset();
             session_destroy();
-            header("location: ". RUTA . "/auth/login");
+            //  Redirecciona la página cuando se cierra sesión.
+            echo '<script type="text/JavaScript">
+                    location.replace("/auth/login");                        
+                  </script>';
         }else{
             header("location: ". RUTA . "/");
         }
