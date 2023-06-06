@@ -28,14 +28,24 @@ class AuthController extends Controller
             $_SESSION['user_name'] = $data["nombre"];
             $_SESSION['user_lastname'] = $data["apellido"];
             header("location:" . RUTA . "/");
-        }else{
+        }
+        else{
             header("location:" . RUTA . "{$this->raiz}");
         }
     }
 
     public function login()
     {
-        return view('auth.login', $data);
+        if(!isset($_SESSION['user'])){
+            return view('auth.login', $data);
+            echo "El usuario no existe";
+        }
+        else{
+            //  Redirecciona la página home cuando esta iniciada una sesión.
+            echo '<script type="text/JavaScript">
+                    location.replace("/");                        
+                  </script>';
+        }
     }
 
     public function logout(){
@@ -47,8 +57,12 @@ class AuthController extends Controller
             echo '<script type="text/JavaScript">
                     location.replace("/auth/login");                        
                   </script>';
-        }else{
-            header("location: ". RUTA . "/");
+        }
+        else{
+            //  Redirecciona la página al home.
+            echo '<script type="text/JavaScript">
+                    location.replace("/");                        
+                  </script>';
         }
     }
 }
