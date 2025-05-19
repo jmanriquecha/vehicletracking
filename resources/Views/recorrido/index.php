@@ -11,7 +11,21 @@
 <?php else: ?>
 <h1 class="text-center h3">RECORRIDOS REALIZADOS</h1>
 <hr>
-<p class="text-end w-100 text-white"><span id="odo" class="p-2 bg-primary">ODO <span id="odoNumber"><?=$iniciaKilometros . " km"?></span></span></p>
+
+<div class="d-flex justify-content-between align-items-center">
+    <p class="mb-0 p-2 mb-3 bg-secondary">
+        <a class="text-white text-decoration-none" href="<?=RUTA?>/recorrido/create">
+            NUEVO
+        </a>
+    </p>
+    <p class="text-white mb-0 mb-3 bg-primary p-2">
+        <span id="odo">ODO 
+            <span id="odoNumber">
+                <?=$iniciaKilometros . " km"?>
+            </span>
+        </span>
+    </p>
+</div>
 <div class="table-responsive-md">
     <table class="table table-striped table-hover text-center">
         <thead class="bg-dark text-white">
