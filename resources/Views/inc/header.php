@@ -13,48 +13,125 @@
     <title>MIVEHICULO</title>
 </head>
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
-    <div class="app-wrapper">
+  <div class="app-wrapper">
 
-        <!-- Header -->
-        <nav class="app-header navbar navbar-expand bg-body">
+    <!--begin::Header-->
+    <nav class="app-header navbar navbar-expand bg-body" id="navigation" tabindex="-1">
+        <!--begin::Container-->
         <div class="container-fluid">
-            <ul class="navbar-nav">
+          <!--begin::Start Navbar Links-->
+          <ul class="navbar-nav" role="navigation" aria-label="Navigation 1">
             <li class="nav-item">
-                <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+              <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
                 <i class="bi bi-list"></i>
-                </a>
+              </a>
+            </li>           
+          </ul>
+          <!--end::Start Navbar Links-->
+
+          <!--begin::End Navbar Links-->
+          <ul class="navbar-nav ms-auto" role="navigation" aria-label="Navigation 2">
+            <!--begin::Navbar Search-->
+            <li class="nav-item">
+              <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                <i class="bi bi-search"></i>
+              </a>
             </li>
-            </ul>
-        </div>
-        </nav>
+            <!--end::Navbar Search-->
 
-        <!-- Sidebar -->
-        <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
-        <div class="sidebar-brand">
-            <a href="#" class="brand-link">
-            <span class="brand-text fw-light">My Dashboard</span>
-            </a>
-        </div>
-        <div class="sidebar-wrapper">
-            <nav class="mt-2">
-            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu">
-                <li class="nav-item">
-                <a href="#" class="nav-link active">
-                    <i class="nav-icon bi bi-speedometer"></i>
-                    <p>Dashboard</p>
-                </a>
+            <!--begin::Fullscreen Toggle-->
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-lte-toggle="fullscreen">
+                <i data-lte-icon="maximize" class="bi bi-arrows-fullscreen"></i>
+                <i data-lte-icon="minimize" class="bi bi-fullscreen-exit d-none"></i>
+              </a>
+            </li>
+            <!--end::Fullscreen Toggle-->
+
+            <!--begin::User Menu Dropdown-->
+            <li class="nav-item dropdown user-menu">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="<?php echo isset($_SESSION['user_img']) ? $_SESSION['user_img'] : Assets."/img/icons/default.png" ?>" class="user-image rounded-circle shadow" alt="User Image">
+                <span class="d-none d-md-inline"><?php echo isset($_SESSION['user_fullname']) ? $_SESSION['user_fullname'] : 'User'; ?></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                <!--begin::User Image-->
+                <li class="user-header text-bg-primary">
+                  <img src="<?php echo isset($_SESSION['user_img']) ? $_SESSION['user_img'] : Assets."/img/icons/default.png" ?>" class="rounded-circle shadow" alt="User Image">
+                  <p>
+                    <?php echo isset($_SESSION['user_fullname']) ? $_SESSION['user_fullname'] : 'User'; ?>
+                    <small>Member since Nov. 2023</small>
+                  </p>
                 </li>
-                <li class="nav-item">
+                <!--end::User Image-->
+                <!--begin::Menu Footer-->
+                <li class="user-footer">
+                  <a href="#" class="btn btn-outline-secondary">Profile</a>
+                  <form action="<?=RUTA?>/auth/logout"  method="post" class="d-inline">
+                     <button class="btn btn-outline-danger float-end" type="submit" name="logout">Salir</button>
+                  </form>
+                </li>
+                <!--end::Menu Footer-->
+              </ul>
+            </li>
+            <!--end::User Menu Dropdown-->
+          </ul>
+          <!--end::End Navbar Links-->
+        </div>
+        <!--end::Container-->
+      </nav>
+    <!--end::Header-->
+    <!-- Sidebar -->
+    <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+      <div class="sidebar-brand">
+        <a href="<?= RUTA ?>" class="brand-link">
+          <span class="brand-text fw-light">My Dashboard</span>
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <nav class="mt-2">
+          <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu">
+            <li class="nav-item">
+              <a href="/<?= RUTA ?>" class="nav-link active">
+                <i class="nav-icon bi bi-house"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item">
                 <a href="#" class="nav-link">
-                    <i class="nav-icon bi bi-bar-chart"></i>
-                    <p>Reports</p>
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    Recorridos
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
                 </a>
-                </li>
-            </ul>
-            </nav>
-        </div>
-        </aside>
+                <ul class="nav nav-treeview" role="navigation" aria-label="Navigation 4" style="display: none; box-sizing: border-box;">
+                  <li class="nav-item">
+                    <a href="<?= RUTA ?>/recorrido/create" class="nav-link">
+                      <i class="nav-icon bi bi-plus-circle"></i>
+                      <p>Agregar</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= RUTA ?>/recorrido" class="nav-link">
+                      <i class="nav-icon bi bi-view-list"></i>
+                      <p>Ver listado</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon bi bi-bar-chart"></i>
+                <p>Reports</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
 
-        <!-- Main content -->
-        <main class="app-main">
-            <div class="app-content-header">
+    <!-- Main content -->
+    <main class="app-main">
+      <div class="app-content-header">
+        <div class="container-fluid">
