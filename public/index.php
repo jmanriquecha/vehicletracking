@@ -7,8 +7,7 @@ use App\Libraries\Core\Request;
 
 $request = new Request();
 
-$session = $_SESSION['user'];
-
-if(isset($session))
+if(isset($_SESSION['user']))
     require_once Views . "../layouts/principal.php";
-
+else
+    require_once Views . "/auth/login.php";

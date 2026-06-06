@@ -31,7 +31,7 @@
     <!-- Sidebar -->
     <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
       <div class="sidebar-brand">
-        <a href="/" class="brand-link">
+        <a href="<?= RUTA ?>" class="brand-link">
           <span class="brand-text fw-light">My Dashboard</span>
         </a>
       </div>
@@ -39,7 +39,7 @@
         <nav class="mt-2">
           <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu">
             <li class="nav-item">
-              <a href="/" class="nav-link active">
+              <a href="<?= RUTA ?>" class="nav-link active">
                 <i class="nav-icon bi bi-house"></i>
                 <p>Dashboard</p>
               </a>
@@ -54,13 +54,13 @@
                 </a>
                 <ul class="nav nav-treeview" role="navigation" aria-label="Navigation 4" style="display: none; box-sizing: border-box;">
                   <li class="nav-item">
-                    <a href="/recorrido/create" class="nav-link">
+                    <a href="<?= RUTA ?>/recorrido/create" class="nav-link">
                       <i class="nav-icon bi bi-plus-circle"></i>
                       <p>Agregar</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/recorrido" class="nav-link">
+                    <a href="<?= RUTA ?>/recorrido" class="nav-link">
                       <i class="nav-icon bi bi-view-list"></i>
                       <p>Ver listado</p>
                     </a>
@@ -85,7 +85,7 @@
           <!-- Aquí se inyectará el contenido específico de cada página -->
         <?php 
         if (isset($request)) {
-            echo $request->send();
+            $request->send();
         }
         ?>
         </div>
