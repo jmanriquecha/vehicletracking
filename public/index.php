@@ -7,7 +7,10 @@ use App\Libraries\Core\Request;
 
 $request = new Request();
 
-if(isset($_SESSION['user']))
-    require_once Views . "../layouts/principal.php";
-else
+if (isset($_SESSION['user'])){
+    require_once Views . "/inc/header.php";
+    $request->send();
+    require_once Views . "/inc/footer.php";
+}else{
     require_once Views . "/auth/login.php";
+}
