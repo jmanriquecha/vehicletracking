@@ -1,5 +1,7 @@
 <?php
 
+ob_start();
+
 require __DIR__ . "/../vendor/autoload.php";
 require __DIR__ . "/../config/config.php";
 
@@ -14,3 +16,5 @@ if (isset($_SESSION['user'])){
 }else{
     require_once Views . "/auth/login.php";
 }
+
+ob_end_flush();

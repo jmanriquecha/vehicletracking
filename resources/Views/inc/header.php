@@ -52,15 +52,15 @@
             <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="<?php echo isset($_SESSION['user_img']) ? $_SESSION['user_img'] : Assets."/img/icons/default.png" ?>" class="user-image rounded-circle shadow" alt="User Image">
-                <span class="d-none d-md-inline"><?php echo isset($_SESSION['user_fullname']) ? $_SESSION['user_fullname'] : 'User'; ?></span>
+                <img src="<?=isset($_SESSION['user_img']) ? $_SESSION['user_img'] : Assets."/img/icons/default.png" ?>" class="user-image rounded-circle shadow" alt="User Image">
+                <span class="d-none d-md-inline"><?=isset($_SESSION['user_fullname']) ? $_SESSION['user_fullname'] : 'User'; ?></span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
-                  <img src="<?php echo isset($_SESSION['user_img']) ? $_SESSION['user_img'] : Assets."/img/icons/default.png" ?>" class="rounded-circle shadow" alt="User Image">
+                  <img src="<?=isset($_SESSION['user_img']) ? $_SESSION['user_img'] : Assets."/img/icons/default.png" ?>" class="rounded-circle shadow" alt="User Image">
                   <p>
-                    <?php echo isset($_SESSION['user_fullname']) ? $_SESSION['user_fullname'] : 'User'; ?>
+                    <?= isset($_SESSION['user_fullname']) ? $_SESSION['user_fullname'] : 'User'; ?>
                     <small>Member since Nov. 2023</small>
                   </p>
                 </li>
