@@ -1,3 +1,6 @@
+<?php
+    include_once Views . "/recorrido/calcula.cambio.aceite.php";
+?>
 <div class="app-content-header">
           <!--begin::Container-->
           <div class="container-fluid">
@@ -28,14 +31,15 @@
                 <!--begin::Small Box Widget 1-->
                 <div class="small-box text-bg-primary">
                   <div class="inner">
-                    <h3>150</h3>
+                    <h3><?=$iniciaKilometros?></h3>
 
-                    <p>New Orders</p>
+                    <p>Km ODO</p>
                   </div>
-                  <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"></path>
-                  </svg>
-                  <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                  <svg class="small-box-icon" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4M3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.39.39 0 0 0-.029-.518z"/>
+                    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A8 8 0 0 1 0 10m8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3"/>
+                  </svg>                            
+                  <a href="<?=Assets?>/recorrido" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
                     More info <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
@@ -46,14 +50,15 @@
                 <!--begin::Small Box Widget 2-->
                 <div class="small-box text-bg-success">
                   <div class="inner">
-                    <h3>53<sup class="fs-5">%</sup></h3>
+                    <h3><?=$proximoCambioAceite?></h3>
 
-                    <p>Bounce Rate</p>
+                    <p>Cambio de Aceite</p>
                   </div>
-                  <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z"></path>
+                  <svg xmlns="http://w3.org" fill="currentColor" class="small-box-icon bi bi-oil-can" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M14.5 5a.5.5 0 0 1 .5.5v2.4a.5.5 0 0 1-.146.354l-1.603 1.603a.5.5 0 0 1-.354.146H12V13h1a.5.5 0 0 1 0 1H3a.5.5 0 0 1 0-1h1v-3H2a.5.5 0 0 1-.354-.146L.043 8.254A.5.5 0 0 1 0 7.9V5.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5zM1 6v1.5h11V6H1zm11 2.5H12V10h1l1-1h-.5zm-1 4.5v-3H4v3h7z"/>
+                    <path d="M8 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                   </svg>
-                  <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                  <a href="<?=Assets?>/mantenimiento/show/84" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
                     More info <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
