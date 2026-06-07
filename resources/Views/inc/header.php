@@ -164,13 +164,13 @@
                       <p>Ver listado</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= RUTA ?>/tmantenimiento" class="nav-link">
+                      <i class="nav-icon bi bi-gear"></i>
+                      <p>Configurar</p>
+                    </a>
+                  </li>
                 </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon bi bi-bar-chart"></i>
-                <p>Reports</p>
-              </a>
             </li>
           </ul>
         </nav>
