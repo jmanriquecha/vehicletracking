@@ -119,7 +119,30 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-fuel-pump"></i>
+                  <p>
+                    Cargar Combustible
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" role="navigation" aria-label="Navigation 4" style="display: none; box-sizing: border-box;">
+                  <li class="nav-item">
+                    <a href="<?= RUTA ?>/tanquear/create" class="nav-link">
+                      <i class="nav-icon bi bi-plus-circle"></i>
+                      <p>Tanquear</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= RUTA ?>/tanquear" class="nav-link">
+                      <i class="nav-icon bi bi-view-list"></i>
+                      <p>Ver listado</p>
+                    </a>
+                  </li>
+                </ul>
+            </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon bi bi-bar-chart"></i>
