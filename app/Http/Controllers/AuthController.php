@@ -27,6 +27,7 @@ class AuthController extends Controller
             $_SESSION['user_img'] = $data['img'];
             $_SESSION['user_name'] = $data["nombre"];
             $_SESSION['user_lastname'] = $data["apellido"];
+            $_SESSION['user_fullname'] = $data["nombre"] . " " . $data["apellido"];
             header("location:" . RUTA . "/");
         }
         else{
