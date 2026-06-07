@@ -13,7 +13,7 @@ MiVehiculo es una solución ligera que implementa una arquitectura MVC mínima c
 - Registro y consulta de mantenimientos
 - Gestión de recorridos y cálculo de cambio de aceite
 - Registro de tanques de combustible
-- Vista de usuario implementada con AdminLTE 4
+- Interfaz de usuario implementada con AdminLTE 4
 - Vista de páginas con plantillas PHP y recursos estáticos
 - Arquitectura modular para ampliar con nuevas entidades
 
@@ -100,8 +100,8 @@ mysql -u usuario -p nombre_base_de_datos < db_script.sql
 
 ## Autor
 
-- Jorge Manrique (`jmanriquecha`)
+- [Jorge Manrique](https://github.com/jmanriquecha)
 
 ## Licencia
 
-Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
