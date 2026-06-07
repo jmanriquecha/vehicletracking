@@ -83,10 +83,11 @@
       </nav>
     <!--end::Header-->
     <!-- Sidebar -->
+     <?= RUTA ?>
     <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
       <div class="sidebar-brand">
-        <a href="<?= RUTA ?>" class="brand-link">
-          <span class="brand-text fw-light">My Dashboard</span>
+        <a href="/<?= RUTA ?>" class="brand-link">
+          <span class="brand-text fw-light">App Vehiculo</span>
         </a>
       </div>
       <div class="sidebar-wrapper">
