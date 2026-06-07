@@ -144,6 +144,29 @@
                 </ul>
             </li>
             <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-wrench-adjustable"></i>
+                  <p>
+                    Mantenimientos
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" role="navigation" aria-label="Navigation 4" style="display: none; box-sizing: border-box;">
+                  <li class="nav-item">
+                    <a href="<?= RUTA ?>/mantenimiento/create" class="nav-link">
+                      <i class="nav-icon bi bi-plus-circle"></i>
+                      <p>Registrar</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= RUTA ?>/mantenimiento" class="nav-link">
+                      <i class="nav-icon bi bi-view-list"></i>
+                      <p>Ver listado</p>
+                    </a>
+                  </li>
+                </ul>
+            </li>
+            <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon bi bi-bar-chart"></i>
                 <p>Reports</p>
