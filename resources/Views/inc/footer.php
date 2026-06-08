@@ -6,7 +6,7 @@
         <strong>
           Copyright © <?=date('Y')?>&nbsp;
           <i class="bi bi-github"></i>
-          <a href="https://www.github.com/jmanriquecha/" class="text-decoration-none">Jorge Manrique</a>.
+          <a href="https://www.github.com/jmanriquecha/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Jorge Manrique</a>.
         </strong>
         Todos los derechos reservados.
         <!--end::Copyright-->
