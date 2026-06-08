@@ -6,6 +6,30 @@ Aplicación web en PHP basada en un mini framework propio para gestionar vehícu
 
 MiVehiculo es una solución ligera que implementa una arquitectura MVC mínima con controladores, modelos y vistas en PHP. Está orientada a proyectos del tipo administrativo donde se requieren funcionalidades de autenticación, control de mantenimiento, registro de recorridos y gestión de carga de combustible.
 
+
+## Capturas de pantalla
+
+- **Login**
+  ![Login](public/img/screenshots/login.png)
+
+- **Dashboard**
+  ![Dashboard](public/img/screenshots/dashboard.png)
+
+- **Nuevo recorrido**
+  ![Nuevo recorrido](public/img/screenshots/nuevo_recorrido.png)
+
+- **Finaliza recorrido**
+  ![Finaliza recorrido](public/img/screenshots/finaliza_reorrido.png)
+
+- **Eliminar recorrido (modal)**
+  ![Eliminar recorrido](public/img/screenshots/eliminar_recorrido.png)
+
+- **Tanquear**
+  ![Tanquear](public/img/screenshots/tanquear.png)
+
+- **Listado de mantenimientos**
+  ![Mantenimientos](public/img/screenshots/mantenimientos.png)
+
 ## Características
 
 - Inicio de sesión y control de sesión de usuario
