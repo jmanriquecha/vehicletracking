@@ -1,20 +1,20 @@
 <?php
 
-ob_start();
+use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 
-require __DIR__ . "/../vendor/autoload.php";
-require __DIR__ . "/../config/config.php";
+define('LARAVEL_START', microtime(true));
 
-use App\Libraries\Core\Request;
-
-$request = new Request();
-
-if (isset($_SESSION['user'])){
-    require_once Views . "/inc/header.php";
-    $request->send();
-    require_once Views . "/inc/footer.php";
-}else{
-    require_once Views . "/auth/login.php";
+// Determine if the application is in maintenance mode...
+if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    require $maintenance;
 }
 
-ob_end_flush();
+// Register the Composer autoloader...
+require __DIR__.'/../vendor/autoload.php';
+
+// Bootstrap Laravel and handle the request...
+/** @var Application $app */
+$app = require_once __DIR__.'/../bootstrap/app.php';
+
+$app->handleRequest(Request::capture());
